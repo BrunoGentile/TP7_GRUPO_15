@@ -67,10 +67,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ListadoSucursalesSeleccionados.aspx" />
     <Content Include="SeleccionarSucursales.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ListadoSucursalesSeleccionados.aspx.cs">
+      <DependentUpon>ListadoSucursalesSeleccionados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListadoSucursalesSeleccionados.aspx.designer.cs">
+      <DependentUpon>ListadoSucursalesSeleccionados.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SeleccionarSucursales.aspx.cs">
       <DependentUpon>SeleccionarSucursales.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -11,7 +11,6 @@ namespace TP7_GRUPO_15
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

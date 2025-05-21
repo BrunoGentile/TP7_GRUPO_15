@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using TP7_GRUPO_15.Clases;
 
 namespace TP7_GRUPO_15
 {
@@ -11,7 +13,7 @@ namespace TP7_GRUPO_15
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
         }
     }
 }

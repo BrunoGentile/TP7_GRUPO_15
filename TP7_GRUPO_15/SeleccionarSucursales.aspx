@@ -19,12 +19,111 @@
         .auto-style12 {
             width: 53px;
         }
-        .auto-style13 {
-            width: 338px;
+        .auto-style15 {
+            width: 76px;
+            height: 23px;
         }
-        .auto-style14 {
-            width: 272px;
+        .auto-style16 {
+            width: 53px;
+            height: 23px;
         }
+        .auto-style18 {
+            width: 251px;
+            height: 23px;
+        }
+        .auto-style20 {
+            height: 23px;
+        }
+        .auto-style23 {
+            width: 76px;
+            height: 174px;
+        }
+        .auto-style24 {
+            width: 53px;
+            height: 174px;
+        }
+        .auto-style28 {
+            height: 174px;
+        }
+        .auto-style29 {
+            width: 292px;
+        }
+        .auto-style30 {
+            width: 292px;
+            height: 23px;
+        }
+        .auto-style32 {
+            width: 182px;
+        }
+        .auto-style33 {
+            width: 182px;
+            height: 23px;
+        }
+        .auto-style35 {
+            width: 254px;
+        }
+        .auto-style36 {
+            width: 254px;
+            height: 23px;
+        }
+        .auto-style37 {
+            width: 76px;
+            height: 42px;
+        }
+        .auto-style38 {
+            width: 53px;
+            height: 42px;
+        }
+        .auto-style39 {
+            height: 42px;
+        }
+        .auto-style42 {
+            width: 292px;
+            height: 51px;
+        }
+        .auto-style43 {
+            width: 251px;
+            height: 51px;
+        }
+        .auto-style44 {
+            width: 182px;
+            height: 51px;
+        }
+        .auto-style45 {
+            width: 254px;
+            height: 51px;
+        }
+        .auto-style46 {
+            width: 76px;
+            height: 51px;
+        }
+        .auto-style47 {
+            width: 53px;
+            height: 51px;
+        }
+        .auto-style48 {
+            height: 51px;
+        }
+        .auto-style51 {
+            width: 292px;
+            height: 30px;
+        }
+        .auto-style53 {
+            width: 254px;
+            height: 30px;
+        }
+        .auto-style54 {
+            width: 76px;
+            height: 30px;
+        }
+        .auto-style55 {
+            width: 53px;
+            height: 30px;
+        }
+        .auto-style56 {
+            height: 30px;
+        }
+ 
     </style>
 </head>
 <body>
@@ -34,100 +133,211 @@
                 <tr>
                     <td class="auto-style10">&nbsp;</td>
                     <td class="auto-style12">&nbsp;</td>
-                    <td class="auto-style13">
+                    <td colspan="3">
                         <asp:HyperLink ID="hpListadoSucursales" runat="server" NavigateUrl="~/SeleccionarSucursales.aspx">Listado de sucursales</asp:HyperLink>
-                    </td>
-                    <td class="auto-style6">&nbsp;</td>
-                    <td class="auto-style14">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:HyperLink ID="hpMostrarSucursales" runat="server" NavigateUrl="~/SeleccionarSucursales.aspx">Mostrar sucursales seleccionadas</asp:HyperLink>
                     </td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style35">&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style10">&nbsp;</td>
                     <td class="auto-style12">&nbsp;</td>
-                    <td class="auto-style13">&nbsp;</td>
+                    <td class="auto-style29">&nbsp;</td>
                     <td class="auto-style6">&nbsp;</td>
-                    <td class="auto-style14">&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style32">&nbsp;</td>
+                    <td class="auto-style35">&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style10">&nbsp;</td>
-                    <td class="auto-style12">&nbsp;</td>
-                    <td class="auto-style13">
+                    <td class="auto-style46"></td>
+                    <td class="auto-style47"></td>
+                    <td class="auto-style42">
                         <asp:Label ID="lblListadoSucursales" runat="server" Font-Bold="True" Font-Size="X-Large" Text="Listado de sucursales"></asp:Label>
                     </td>
-                    <td class="auto-style6">&nbsp;</td>
-                    <td class="auto-style14">&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style43"></td>
+                    <td class="auto-style44"></td>
+                    <td class="auto-style45"></td>
+                    <td class="auto-style48"></td>
+                    <td class="auto-style48"></td>
                 </tr>
                 <tr>
-                    <td class="auto-style10">&nbsp;</td>
-                    <td class="auto-style12">&nbsp;</td>
-                    <td class="auto-style13">&nbsp;</td>
-                    <td class="auto-style6">&nbsp;</td>
-                    <td class="auto-style14">&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style54"></td>
+                    <td class="auto-style55"></td>
+                    <td class="auto-style51">
+                        <br />
+                    </td>
+                    <td class="auto-style56" colspan="2">
+                        <br />
+                        <br />
+                    </td>
+                    <td class="auto-style53"></td>
+                    <td class="auto-style56"></td>
+                    <td class="auto-style56"></td>
                 </tr>
                 <tr>
-                    <td class="auto-style10">&nbsp;</td>
-                    <td class="auto-style12">&nbsp;</td>
-                    <td class="auto-style13">
+                    <td class="auto-style37"></td>
+                    <td class="auto-style38"></td>
+                    <td colspan="3" class="auto-style39">
                         <asp:Label ID="lblBusquedaSucursal" runat="server" Text="Búsqueda por nombre de sucursal:"></asp:Label>
-                    </td>
-                    <td class="auto-style6">
                         <asp:TextBox ID="txtBuscarSucursal" runat="server" Width="221px"></asp:TextBox>
-                    </td>
-                    <td class="auto-style14">
                         <asp:Button ID="btnBuscar" runat="server" Text="Buscar" />
                     </td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style39">
+                        <br />
+                    </td>
+                    <td class="auto-style39"></td>
+                    <td class="auto-style39"></td>
                 </tr>
                 <tr>
-                    <td class="auto-style10">&nbsp;</td>
-                    <td class="auto-style12">&nbsp;</td>
-                    <td class="auto-style13">&nbsp;</td>
-                    <td class="auto-style6">&nbsp;</td>
-                    <td class="auto-style14">&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style15"></td>
+                    <td class="auto-style16"></td>
+                    <td class="auto-style30"></td>
+                    <td class="auto-style18"></td>
+                    <td class="auto-style33"></td>
+                    <td class="auto-style36"></td>
+                    <td class="auto-style20"></td>
+                    <td class="auto-style20"></td>
                 </tr>
                 <tr>
-                    <td class="auto-style10">
-                        <asp:DataList ID="DataList1" runat="server">
+                    <td class="auto-style23">
+                        <asp:DataList ID="DataListSucursales" runat="server">
                         </asp:DataList>
                     </td>
-                    <td class="auto-style12">&nbsp;</td>
-                    <td class="auto-style13">
-                        <asp:ListView ID="ListView1" runat="server">
+                    <td class="auto-style24"></td>
+                    <td class="auto-style28" colspan="4">
+                        <asp:ListView ID="ListViewSucursales" runat="server" DataSourceID="SqlDataSourceSucursales" GroupItemCount="3" DataKeyNames="Id_Sucursal">
+                        <%--   
+                            <AlternatingItemTemplate>
+                                <td runat="server" style="background-color: #FAFAD2;color: #284775;">Id_Sucursal:
+                                    <asp:Label ID="Id_SucursalLabel" runat="server" Text='<%# Eval("Id_Sucursal") %>' />
+                                    <br />
+                                    NombreSucursal:
+                                    <asp:Label ID="NombreSucursalLabel" runat="server" Text='<%# Eval("NombreSucursal") %>' />
+                                    <br />
+                                    DescripcionSucursal:
+                                    <asp:Label ID="DescripcionSucursalLabel" runat="server" Text='<%# Eval("DescripcionSucursal") %>' />
+                                    <br />
+                                    URL_Imagen_Sucursal:
+                                    <asp:Label ID="URL_Imagen_SucursalLabel" runat="server" Text='<%# Eval("URL_Imagen_Sucursal") %>' />
+                                    <br />
+                                </td>
+                            </AlternatingItemTemplate>
+                            --%>
+                            <EditItemTemplate>
+                                <td runat="server" style="background-color: #FFCC66;color: #000080;">Id_Sucursal:
+                                    <asp:Label ID="Id_SucursalLabel1" runat="server" Text='<%# Eval("Id_Sucursal") %>' />
+                                    <br />NombreSucursal:
+                                    <asp:TextBox ID="NombreSucursalTextBox" runat="server" Text='<%# Bind("NombreSucursal") %>' />
+                                    <br />DescripcionSucursal:
+                                    <asp:TextBox ID="DescripcionSucursalTextBox" runat="server" Text='<%# Bind("DescripcionSucursal") %>' />
+                                    <br />
+                                    URL_Imagen_Sucursal:
+                                    <asp:TextBox ID="URL_Imagen_SucursalTextBox" runat="server" Text='<%# Bind("URL_Imagen_Sucursal") %>' />
+                                    <br />
+                                    <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="Actualizar" />
+                                    <br />
+                                    <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Cancelar" />
+                                    <br />
+                                </td>
+                            </EditItemTemplate>
+                            <EmptyDataTemplate>
+                                <table runat="server" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;">
+                                    <tr>
+                                        <td>No se han devuelto datos.</td>
+                                    </tr>
+                                </table>
+                            </EmptyDataTemplate>
+                            <EmptyItemTemplate>
+<td runat="server" />
+                            </EmptyItemTemplate>
+                            <GroupTemplate>
+                                <tr id="itemPlaceholderContainer" runat="server">
+                                    <td id="itemPlaceholder" runat="server"></td>
+                                </tr>
+                            </GroupTemplate>
+                            <InsertItemTemplate>
+                                <td runat="server" style="">NombreSucursal:
+                                    <asp:TextBox ID="NombreSucursalTextBox" runat="server" Text='<%# Bind("NombreSucursal") %>' />
+                                    <br />DescripcionSucursal:
+                                    <asp:TextBox ID="DescripcionSucursalTextBox" runat="server" Text='<%# Bind("DescripcionSucursal") %>' />
+                                    <br />URL_Imagen_Sucursal:
+                                    <asp:TextBox ID="URL_Imagen_SucursalTextBox" runat="server" Text='<%# Bind("URL_Imagen_Sucursal") %>' />
+                                    <br />
+                                    <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="Insertar" />
+                                    <br />
+                                    <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Borrar" />
+                                    <br /></td>
+                            </InsertItemTemplate>
+                            <ItemTemplate>
+                                <td runat="server" style="padding: 15px;">
+                                    <div style="border: 1px solid #ccc; border-radius: 8px; background-color: #ffffff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); padding: 10px; text-align: center; width: 200px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+                                        <asp:Label ID="NombreSucursalLabel" runat="server" Text='<%# Eval("NombreSucursal") %>' />
+                                        <asp:Image ID="ImageButton1" runat="server"
+                                            ImageUrl='<%# Eval("URL_Imagen_Sucursal") %>'
+                                            Style="max-width: 100%; height: 100px; object-fit: contain; margin: 10px 0;" />
+                                        <asp:Label ID="DescripcionSucursalLabel" runat="server"
+                                            Text='<%# Eval("DescripcionSucursal") %>'
+                                            Style="font-size: 13px; margin-bottom: 10px; height: 60px; overflow: hidden; display: block;" />
+                                        <asp:Button ID="btnSeleccionar" runat="server" Text="Seleccionar"
+                                            Style="background-color: #007bff; color: white; border: none; padding: 6px 10px; border-radius: 4px; cursor: pointer; font-size: 13px;" />
+                                    </div>
+                                </td>
+                            </ItemTemplate>
+                            <LayoutTemplate>
+                                <table runat="server" style="width: 100%; border-collapse: collapse;">
+                                    <tr runat="server">
+                                        <td runat="server" style="text-align: center;">
+                                            <table id="groupPlaceholderContainer" runat="server" style="margin: auto; border-collapse: separate; border-spacing: 20px;">
+                                                <tr id="groupPlaceholder" runat="server">
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr runat="server">
+                                        <td runat="server" style="text-align: center; background-color: #f1f1f1; padding: 10px;">
+                                            <asp:DataPager ID="DataPager1" runat="server" PageSize="6">
+                                                <Fields>
+                                                    <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" ShowNextPageButton="False" ShowPreviousPageButton="False" />
+                                                    <asp:NumericPagerField />
+                                                    <asp:NextPreviousPagerField ButtonType="Button" ShowLastPageButton="True" ShowNextPageButton="False" ShowPreviousPageButton="False" />
+                                                </Fields>
+                                            </asp:DataPager>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </LayoutTemplate>
+                            <SelectedItemTemplate>
+                                <td runat="server" style="background-color: #FFCC66;font-weight: bold;color: #000080;">Id_Sucursal:
+                                    <asp:Label ID="Id_SucursalLabel" runat="server" Text='<%# Eval("Id_Sucursal") %>' />
+                                    <br />NombreSucursal:
+                                    <asp:Label ID="NombreSucursalLabel" runat="server" Text='<%# Eval("NombreSucursal") %>' />
+                                    <br />DescripcionSucursal:
+                                    <asp:Label ID="DescripcionSucursalLabel" runat="server" Text='<%# Eval("DescripcionSucursal") %>' />
+                                    <br />URL_Imagen_Sucursal:
+                                    <asp:Label ID="URL_Imagen_SucursalLabel" runat="server" Text='<%# Eval("URL_Imagen_Sucursal") %>' />
+                                    <br />
+                                </td>
+                            </SelectedItemTemplate>
                         </asp:ListView>
                     </td>
-                    <td class="auto-style6">&nbsp;</td>
-                    <td class="auto-style14">&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style28"></td>
+                    <td class="auto-style28"></td>
                 </tr>
                 <tr>
-                    <td class="auto-style10">&nbsp;</td>
-                    <td class="auto-style12">&nbsp;</td>
-                    <td class="auto-style13">&nbsp;</td>
-                    <td class="auto-style6">&nbsp;</td>
-                    <td class="auto-style14">&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style15"></td>
+                    <td class="auto-style16"></td>
+                    <td class="auto-style30">
+                        <asp:SqlDataSource ID="SqlDataSourceSucursales" runat="server" ConnectionString="<%$ ConnectionStrings:BDSucursalesConnectionString %>" SelectCommand="SELECT [Id_Sucursal], [NombreSucursal], [DescripcionSucursal], [URL_Imagen_Sucursal] FROM [Sucursal]"></asp:SqlDataSource>
+                    </td>
+                    <td class="auto-style18"></td>
+                    <td class="auto-style33"></td>
+                    <td class="auto-style36"></td>
+                    <td class="auto-style20"></td>
+                    <td class="auto-style20"></td>
                 </tr>
             </table>
         </div>

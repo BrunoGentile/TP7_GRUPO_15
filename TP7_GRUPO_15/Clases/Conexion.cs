@@ -13,6 +13,7 @@ namespace TP7_GRUPO_15.Clases
         //CONSTRUCTOR
         public Conexion() 
         {
+            
         }
 
 

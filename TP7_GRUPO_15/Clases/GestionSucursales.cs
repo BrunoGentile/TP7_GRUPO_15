@@ -22,7 +22,6 @@ namespace TP7_GRUPO_15.Clases
         public GestionSucursales(Sucursales sucursal)
         {
             this.sucursal = sucursal;
-            conexion = new Conexion();
         }
 
         // RETORNA UN DATATABLE CON LA TABLA DE SUCURSALES

@@ -184,7 +184,7 @@
                     <td colspan="3" class="auto-style39">
                         <asp:Label ID="lblBusquedaSucursal" runat="server" Text="Búsqueda por nombre de sucursal:"></asp:Label>
                         <asp:TextBox ID="txtBuscarSucursal" runat="server" Width="221px"></asp:TextBox>
-                        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" />
+                        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" />
                     </td>
                     <td class="auto-style39">
                         <br />
@@ -209,7 +209,7 @@
                     </td>
                     <td class="auto-style24"></td>
                     <td class="auto-style28" colspan="4">
-                        <asp:ListView ID="ListViewSucursales" runat="server" DataSourceID="SqlDataSourceSucursales" GroupItemCount="3" DataKeyNames="Id_Sucursal">
+                        <asp:ListView ID="ListViewSucursales" runat="server" GroupItemCount="3" DataKeyNames="Id_Sucursal" OnPagePropertiesChanging="ListViewSucursales_PagePropertiesChanging">
                         <%--   
                             <AlternatingItemTemplate>
                                 <td runat="server" style="background-color: #FAFAD2;color: #284775;">Id_Sucursal:

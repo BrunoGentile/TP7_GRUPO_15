@@ -14,6 +14,52 @@ namespace TP7_GRUPO_15
         protected void Page_Load(object sender, EventArgs e)
         {
             UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
+
+            if (!IsPostBack)
+            {
+                // CARGA LA LISTA DE SUCURSALES AL CARGAR LA PÁGINA
+                CargarListView();
+            }
+
+        }
+
+        // CARGA LA LISTA DE SUCURSALES EN EL LISTVIEW
+        protected void CargarListView()
+        {
+            GestionSucursales GS = new GestionSucursales();
+            ListViewSucursales.DataSource = GS.MostrarSucursales();
+            ListViewSucursales.DataBind();
+        }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+            if ( txtBuscarSucursal.Text == string.Empty )
+            {
+                CargarListView();
+            }
+            else // BUSCA SUCURSALES POR NOMBRE EN EL LISTVIEW
+            {
+                GestionSucursales GS = new GestionSucursales();
+                ListViewSucursales.DataSource = GS.MostrarSucursalesIngresadas( txtBuscarSucursal.Text );
+                ListViewSucursales.DataBind();
+            }
+
+        }
+
+        // MÉTODO PARA LA PAGINACIÓN DEL LISTVIEW
+        protected void ListViewSucursales_PagePropertiesChanging(object sender, PagePropertiesChangingEventArgs e)
+        {
+            // ENCUENTRA EL DATAPAGER
+            DataPager pager = (DataPager)ListViewSucursales.FindControl("DataPager1");
+
+            // ACTUALIZA EL ÍNDICE DE PÁGINA SIN HACER UN DATABIND INMEDIATO (false)
+            pager.SetPageProperties(e.StartRowIndex, e.MaximumRows, false);
+
+            // REASIGNA DATOS A LA GRILLA
+            GestionSucursales GS = new GestionSucursales();
+            ListViewSucursales.DataSource = GS.MostrarSucursales();
+            ListViewSucursales.DataBind();
         }
     }
 }

@@ -27,6 +27,8 @@ namespace TP7_GRUPO_15
         // CARGA LA LISTA DE SUCURSALES EN EL LISTVIEW
         protected void CargarListView()
         {
+            Session["provinciaSeleccionada"] = null;
+            Session["ordenSucursales"] = null;
             GestionSucursales GS = new GestionSucursales();
             ListViewSucursales.DataSource = GS.MostrarSucursales();
             ListViewSucursales.DataBind();
@@ -37,6 +39,7 @@ namespace TP7_GRUPO_15
 
             if (txtBuscarSucursal.Text == string.Empty)
             {
+                
                 CargarListView();
             }
             else // BUSCA SUCURSALES POR NOMBRE EN EL LISTVIEW
@@ -65,6 +68,20 @@ namespace TP7_GRUPO_15
             ListViewSucursales.DataSource = GS.CargarSucursalesPorProvincia(idProvincia);
             ListViewSucursales.DataBind();
             }
+            if (Session["ordenSucursales"] != null)
+            {
+                string orden = Convert.ToString(Session["ordenSucursales"]);
+                GestionSucursales GS = new GestionSucursales();
+                ListViewSucursales.DataSource = GS.OrdenDescendente(Session["ordenSucursales"].ToString());
+                ListViewSucursales.DataBind();
+            }
+            else
+            {
+                GestionSucursales GS = new GestionSucursales();
+                ListViewSucursales.DataSource = GS.MostrarSucursales();
+                ListViewSucursales.DataBind();
+            }
+            
         }
 
         protected void btnProvincias_Command(object sender, CommandEventArgs e)
@@ -83,16 +100,16 @@ namespace TP7_GRUPO_15
         protected void btnOrdenDescendente_Click(object sender, EventArgs e)
         {
             Session["provinciaSeleccionada"] = null;
-
+            Session["ordenSucursales"] = "DESC" ;
             GestionSucursales GS = new GestionSucursales();
-            ListViewSucursales.DataSource = GS.OrdenDescendente();
+            ListViewSucursales.DataSource = GS.OrdenDescendente(Session["ordenSucursales"].ToString());
             ListViewSucursales.DataBind();
 
         }
 
         protected void btnOrdenXDefecto_Click(object sender, EventArgs e)
         {
-            Session["provinciaSeleccionada"] = null;
+          
             CargarListView();
         }
 

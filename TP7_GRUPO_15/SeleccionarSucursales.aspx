@@ -173,7 +173,7 @@
                     <td class="auto-style54"></td>
                     <td class="auto-style55"></td>
                     <td class="auto-style51">
-                        <asp:RegularExpressionValidator ID="revSucursales" runat="server" ControlToValidate="txtBuscarSucursal" ValidationExpression="^[a-zA-Z\s]*$" ValidationGroup="1">no se aceptan caracteres acentuadas  </asp:RegularExpressionValidator>
+                        <asp:RegularExpressionValidator ID="revSucursales" runat="server" ControlToValidate="txtBuscarSucursal" ValidationExpression="^[a-zA-Z\s.]*$" ValidationGroup="1">no se aceptan caracteres acentuadas  </asp:RegularExpressionValidator>
                         <br />
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtBuscarSucursal" ValidationGroup="1">ingrese una sucusal</asp:RequiredFieldValidator>
                     </td>

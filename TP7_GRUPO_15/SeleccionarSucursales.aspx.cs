@@ -35,14 +35,14 @@ namespace TP7_GRUPO_15
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
 
-            if ( txtBuscarSucursal.Text == string.Empty )
+            if (txtBuscarSucursal.Text == string.Empty)
             {
                 CargarListView();
             }
             else // BUSCA SUCURSALES POR NOMBRE EN EL LISTVIEW
             {
                 GestionSucursales GS = new GestionSucursales();
-                ListViewSucursales.DataSource = GS.MostrarSucursalesIngresadas( txtBuscarSucursal.Text );
+                ListViewSucursales.DataSource = GS.MostrarSucursalesIngresadas(txtBuscarSucursal.Text);
                 ListViewSucursales.DataBind();
             }
 
@@ -58,31 +58,27 @@ namespace TP7_GRUPO_15
             pager.SetPageProperties(e.StartRowIndex, e.MaximumRows, false);
 
             // REASIGNA DATOS A LA GRILLA
+            if (Session["provinciaSeleccionada"] != null)
+            {
+            int idProvincia = Convert.ToInt32(Session["provinciaSeleccionada"]);
             GestionSucursales GS = new GestionSucursales();
-            ListViewSucursales.DataSource = GS.MostrarSucursales();
+            ListViewSucursales.DataSource = GS.CargarSucursalesPorProvincia(idProvincia);
             ListViewSucursales.DataBind();
+            }
         }
 
         protected void btnProvincias_Command(object sender, CommandEventArgs e)
         {
-            if (e.CommandName== "filtrarProvincia")
+          
+            if (e.CommandName == "filtrarProvincia")
             {
-            int idProvincia = Convert.ToInt32(e.CommandArgument);
-            //if (int.TryParse(e.CommandArgument.ToString(), out int idProvincia))
-            //{
-              //  CargarSucursalesPorProvincia(idProvincia);
-            //}
-         
-
-            // Llamamos a una función que cargue las sucursales de esa provincia
-            GestionSucursales gs = new GestionSucursales();
-            //lvSucursales.DataSource = dt;
-            //lvSucursales.DataBind();
-
-            ListViewSucursales.DataSource = gs.CargarSucursalesPorProvincia(idProvincia);
-            ListViewSucursales.DataBind();
+                int idProvincia = Convert.ToInt32(e.CommandArgument);
+                Session["provinciaSeleccionada"] = idProvincia;
+                GestionSucursales gs = new GestionSucursales();
+                ListViewSucursales.DataSource = gs.CargarSucursalesPorProvincia(idProvincia);
+                ListViewSucursales.DataBind();
             }
         }
     }
-        }
+}
     

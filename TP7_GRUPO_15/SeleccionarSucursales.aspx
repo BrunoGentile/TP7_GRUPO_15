@@ -213,7 +213,11 @@
                 </tr>
                 <tr>
                     <td class="auto-style23">
-                        <asp:DataList ID="DataListSucursales" runat="server">
+                        <asp:DataList ID="DataListSucursales" runat="server" DataSourceID="SqlDataSourceSucursales">
+                            <ItemTemplate>
+                                <asp:Button ID="btnProvincias" runat="server" Text='<%# Eval("DescripcionProvincia") %>' CommandArgument='<%# Eval("Id_Provincia") %>' />
+                                <br />
+                            </ItemTemplate>
                         </asp:DataList>
                     </td>
                     <td class="auto-style24"></td>
@@ -340,7 +344,7 @@
                     <td class="auto-style15"></td>
                     <td class="auto-style16"></td>
                     <td class="auto-style30">
-                        <asp:SqlDataSource ID="SqlDataSourceSucursales" runat="server" ConnectionString="<%$ ConnectionStrings:BDSucursalesConnectionString %>" SelectCommand="SELECT [Id_Sucursal], [NombreSucursal], [DescripcionSucursal], [URL_Imagen_Sucursal] FROM [Sucursal]"></asp:SqlDataSource>
+                        <asp:SqlDataSource ID="SqlDataSourceSucursales" runat="server" ConnectionString="<%$ ConnectionStrings:BDSucursalesConnectionString2 %>" SelectCommand="SELECT [DescripcionProvincia] FROM [Provincia]" ProviderName="<%$ ConnectionStrings:BDSucursalesConnectionString2.ProviderName %>"></asp:SqlDataSource>
                     </td>
                     <td class="auto-style69"></td>
                     <td class="auto-style72"></td>

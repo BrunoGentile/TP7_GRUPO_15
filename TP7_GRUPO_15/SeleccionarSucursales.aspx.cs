@@ -6,6 +6,7 @@ using System.Data;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using TP7_GRUPO_15.Clases;
+using System.Data.SqlClient;
 
 namespace TP7_GRUPO_15
 {
@@ -62,16 +63,23 @@ namespace TP7_GRUPO_15
             ListViewSucursales.DataBind();
         }
 
-        protected void Button1_Click(Object sender, EventArgs e)
+        protected void btnProvincias_Command(object sender, CommandEventArgs e)
         {
-            GestionSucursales GS = new GestionSucursales();
-            ListViewSucursales.DataSource = GS.OrdenDescendente();
+            int idProvincia = Convert.ToInt32(e.CommandArgument);
+            //if (int.TryParse(e.CommandArgument.ToString(), out int idProvincia))
+            //{
+              //  CargarSucursalesPorProvincia(idProvincia);
+            //}
+         
+
+            // Llamamos a una función que cargue las sucursales de esa provincia
+            GestionSucursales gs = new GestionSucursales();
+            //lvSucursales.DataSource = dt;
+            //lvSucursales.DataBind();
+
+            ListViewSucursales.DataSource = gs.CargarSucursalesPorProvincia(idProvincia);
             ListViewSucursales.DataBind();
         }
-
-        protected void btnOrdenXDefecto_Click(Object sender, EventArgs e)
-        {
-            CargarListView();
-        }
     }
-}
+        }
+    

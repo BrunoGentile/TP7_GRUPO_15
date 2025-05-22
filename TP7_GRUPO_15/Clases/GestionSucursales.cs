@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.UI.WebControls;
 using TP7_GRUPO_15.Clases;
 
 namespace TP7_GRUPO_15.Clases
@@ -53,15 +54,22 @@ namespace TP7_GRUPO_15.Clases
             return dt;
         }
 
-        public DataTable OrdenDescendente()
+        public DataTable CargarSucursalesPorProvincia(int idProvincia)
         {
-            //ORDENA LAS SUCURSALES EN BASE A SU ID DE FORMA DESCENDENTE (DE MAYOR A MENOR)
-            DataSet ds = new DataSet();
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT * FROM Sucursal ORDER BY Id_Sucursal DESC", conexion.ObtenerConexion());
-            sqlDataAdapter.Fill(ds, "Sucursal");
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Sucursal INNER JOIN Provincia ON Id_Provincia = Id_ProvinciaSucursal WHERE Id_ProvinciaSucursal = '@IdProvincia'", conexion.ObtenerConexion());
+            cmd.Parameters.AddWithValue("@IdProvincia", idProvincia);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+
             conexion.ObtenerConexion().Close();
-            return ds.Tables["Sucursal"];
+            return dt;
         }
+
     }
+    }
+
+
     
-}

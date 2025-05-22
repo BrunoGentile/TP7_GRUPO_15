@@ -173,7 +173,9 @@
                     <td class="auto-style54"></td>
                     <td class="auto-style55"></td>
                     <td class="auto-style51">
+                        <asp:RegularExpressionValidator ID="revSucursales" runat="server" ControlToValidate="txtBuscarSucursal" ValidationExpression="^[a-zA-Z\s]*$" ValidationGroup="1">no se aceptan caracteres acentuadas  </asp:RegularExpressionValidator>
                         <br />
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtBuscarSucursal" ValidationGroup="1">ingrese una sucusal</asp:RequiredFieldValidator>
                     </td>
                     <td class="auto-style56" colspan="2">
                         <br />
@@ -188,8 +190,8 @@
                     <td class="auto-style38"></td>
                     <td colspan="3" class="auto-style39">
                         <asp:Label ID="lblBusquedaSucursal" runat="server" Text="Búsqueda por nombre de sucursal:"></asp:Label>
-                        <asp:TextBox ID="txtBuscarSucursal" runat="server" Width="221px"></asp:TextBox>
-                        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" />
+                        <asp:TextBox ID="txtBuscarSucursal" runat="server" Width="221px" ValidationGroup="1"></asp:TextBox>
+                        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" ValidationGroup="1" />
                     </td>
                     <td class="auto-style60">
                         <br />

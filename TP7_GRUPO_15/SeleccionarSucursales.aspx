@@ -10,9 +10,6 @@
         .auto-style1 {
             width: 100%;
         }
-        .auto-style6 {
-            width: 251px;
-        }
         .auto-style10 {
             width: 76px;
         }
@@ -25,10 +22,6 @@
         }
         .auto-style16 {
             width: 53px;
-            height: 23px;
-        }
-        .auto-style18 {
-            width: 251px;
             height: 23px;
         }
         .auto-style20 {
@@ -46,24 +39,10 @@
             height: 174px;
         }
         .auto-style29 {
-            width: 292px;
+            width: 531px;
         }
         .auto-style30 {
-            width: 292px;
-            height: 23px;
-        }
-        .auto-style32 {
-            width: 182px;
-        }
-        .auto-style33 {
-            width: 182px;
-            height: 23px;
-        }
-        .auto-style35 {
-            width: 254px;
-        }
-        .auto-style36 {
-            width: 254px;
+            width: 531px;
             height: 23px;
         }
         .auto-style37 {
@@ -78,19 +57,7 @@
             height: 42px;
         }
         .auto-style42 {
-            width: 292px;
-            height: 51px;
-        }
-        .auto-style43 {
-            width: 251px;
-            height: 51px;
-        }
-        .auto-style44 {
-            width: 182px;
-            height: 51px;
-        }
-        .auto-style45 {
-            width: 254px;
+            width: 531px;
             height: 51px;
         }
         .auto-style46 {
@@ -105,11 +72,11 @@
             height: 51px;
         }
         .auto-style51 {
-            width: 292px;
+            width: 531px;
             height: 30px;
         }
         .auto-style53 {
-            width: 254px;
+            width: 86px;
             height: 30px;
         }
         .auto-style54 {
@@ -122,6 +89,44 @@
         }
         .auto-style56 {
             height: 30px;
+        }
+ 
+        .auto-style60 {
+            height: 42px;
+            width: 86px;
+        }
+        .auto-style61 {
+            width: 86px;
+        }
+        .auto-style62 {
+            width: 86px;
+            height: 51px;
+        }
+        .auto-style63 {
+            width: 86px;
+            height: 23px;
+        }
+        .auto-style67 {
+            width: 35px;
+        }
+        .auto-style68 {
+            width: 35px;
+            height: 51px;
+        }
+        .auto-style69 {
+            width: 35px;
+            height: 23px;
+        }
+        .auto-style70 {
+            width: 21px;
+        }
+        .auto-style71 {
+            width: 21px;
+            height: 51px;
+        }
+        .auto-style72 {
+            width: 21px;
+            height: 23px;
         }
  
     </style>
@@ -138,7 +143,7 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:HyperLink ID="hpMostrarSucursales" runat="server" NavigateUrl="~/SeleccionarSucursales.aspx">Mostrar sucursales seleccionadas</asp:HyperLink>
                     </td>
-                    <td class="auto-style35">&nbsp;</td>
+                    <td class="auto-style61">&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
@@ -146,9 +151,9 @@
                     <td class="auto-style10">&nbsp;</td>
                     <td class="auto-style12">&nbsp;</td>
                     <td class="auto-style29">&nbsp;</td>
-                    <td class="auto-style6">&nbsp;</td>
-                    <td class="auto-style32">&nbsp;</td>
-                    <td class="auto-style35">&nbsp;</td>
+                    <td class="auto-style67">&nbsp;</td>
+                    <td class="auto-style70">&nbsp;</td>
+                    <td class="auto-style61">&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
@@ -158,9 +163,9 @@
                     <td class="auto-style42">
                         <asp:Label ID="lblListadoSucursales" runat="server" Font-Bold="True" Font-Size="X-Large" Text="Listado de sucursales"></asp:Label>
                     </td>
-                    <td class="auto-style43"></td>
-                    <td class="auto-style44"></td>
-                    <td class="auto-style45"></td>
+                    <td class="auto-style68"></td>
+                    <td class="auto-style71"></td>
+                    <td class="auto-style62"></td>
                     <td class="auto-style48"></td>
                     <td class="auto-style48"></td>
                 </tr>
@@ -186,7 +191,7 @@
                         <asp:TextBox ID="txtBuscarSucursal" runat="server" Width="221px"></asp:TextBox>
                         <asp:Button ID="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" />
                     </td>
-                    <td class="auto-style39">
+                    <td class="auto-style60">
                         <br />
                     </td>
                     <td class="auto-style39"></td>
@@ -196,9 +201,13 @@
                     <td class="auto-style15"></td>
                     <td class="auto-style16"></td>
                     <td class="auto-style30"></td>
-                    <td class="auto-style18"></td>
-                    <td class="auto-style33"></td>
-                    <td class="auto-style36"></td>
+                    <td class="auto-style69">
+                        <asp:Button ID="btnOrdenDescendente" runat="server" OnClick="Button1_Click" Text="Orden descendente" Width="139px" />
+                    </td>
+                    <td class="auto-style72">&nbsp;</td>
+                    <td class="auto-style63">
+                        <asp:Button ID="btnOrdenXDefecto" runat="server" OnClick="btnOrdenXDefecto_Click" Text="Orden por defecto" Width="121px" />
+                    </td>
                     <td class="auto-style20"></td>
                     <td class="auto-style20"></td>
                 </tr>
@@ -333,9 +342,9 @@
                     <td class="auto-style30">
                         <asp:SqlDataSource ID="SqlDataSourceSucursales" runat="server" ConnectionString="<%$ ConnectionStrings:BDSucursalesConnectionString %>" SelectCommand="SELECT [Id_Sucursal], [NombreSucursal], [DescripcionSucursal], [URL_Imagen_Sucursal] FROM [Sucursal]"></asp:SqlDataSource>
                     </td>
-                    <td class="auto-style18"></td>
-                    <td class="auto-style33"></td>
-                    <td class="auto-style36"></td>
+                    <td class="auto-style69"></td>
+                    <td class="auto-style72"></td>
+                    <td class="auto-style63"></td>
                     <td class="auto-style20"></td>
                     <td class="auto-style20"></td>
                 </tr>

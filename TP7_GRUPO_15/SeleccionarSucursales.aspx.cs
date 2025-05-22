@@ -61,5 +61,17 @@ namespace TP7_GRUPO_15
             ListViewSucursales.DataSource = GS.MostrarSucursales();
             ListViewSucursales.DataBind();
         }
+
+        protected void Button1_Click(Object sender, EventArgs e)
+        {
+            GestionSucursales GS = new GestionSucursales();
+            ListViewSucursales.DataSource = GS.OrdenDescendente();
+            ListViewSucursales.DataBind();
+        }
+
+        protected void btnOrdenXDefecto_Click(Object sender, EventArgs e)
+        {
+            CargarListView();
+        }
     }
 }

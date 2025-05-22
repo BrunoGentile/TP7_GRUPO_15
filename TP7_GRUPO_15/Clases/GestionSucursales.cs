@@ -28,7 +28,6 @@ namespace TP7_GRUPO_15.Clases
         // RETORNA UN DATATABLE CON LA TABLA DE SUCURSALES
         public DataTable MostrarSucursales()
         {
-            
             DataSet ds = new DataSet();
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT * FROM Sucursal", conexion.ObtenerConexion());
 
@@ -54,6 +53,15 @@ namespace TP7_GRUPO_15.Clases
             return dt;
         }
 
+        public DataTable OrdenDescendente()
+        {
+            //ORDENA LAS SUCURSALES EN BASE A SU ID DE FORMA DESCENDENTE (DE MAYOR A MENOR)
+            DataSet ds = new DataSet();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT * FROM Sucursal ORDER BY Id_Sucursal DESC", conexion.ObtenerConexion());
+            sqlDataAdapter.Fill(ds, "Sucursal");
+            conexion.ObtenerConexion().Close();
+            return ds.Tables["Sucursal"];
+        }
     }
-      
+    
 }

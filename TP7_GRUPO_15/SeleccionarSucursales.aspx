@@ -215,7 +215,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style23">
-                        <asp:DataList ID="DataListSucursales" runat="server" DataSourceID="SqlDataSourceSucursales" OnItemCommand="btnProvincias_Command">
+                        <asp:DataList ID="DataListSucursales" runat="server" DataSourceID="SqlDataSourceSucursales" OnItemCommand="btnProvincias_Command" Font-Bold="True" Font-Size="Large">
                             <ItemTemplate>
                                 <asp:Button ID="btnProvincias" runat="server" Text='<%# Eval("DescripcionProvincia") %>' CommandArgument='<%# Eval("Id_Provincia") %>' CommandName="filtrarProvincia" />
                                 <br />

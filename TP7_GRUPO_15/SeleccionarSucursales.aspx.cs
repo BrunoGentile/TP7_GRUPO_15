@@ -65,6 +65,8 @@ namespace TP7_GRUPO_15
 
         protected void btnProvincias_Command(object sender, CommandEventArgs e)
         {
+            if (e.CommandName== "filtrarProvincia")
+            {
             int idProvincia = Convert.ToInt32(e.CommandArgument);
             //if (int.TryParse(e.CommandArgument.ToString(), out int idProvincia))
             //{
@@ -79,6 +81,7 @@ namespace TP7_GRUPO_15
 
             ListViewSucursales.DataSource = gs.CargarSucursalesPorProvincia(idProvincia);
             ListViewSucursales.DataBind();
+            }
         }
     }
         }

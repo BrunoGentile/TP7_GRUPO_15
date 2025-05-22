@@ -56,7 +56,7 @@ namespace TP7_GRUPO_15.Clases
 
         public DataTable CargarSucursalesPorProvincia(int idProvincia)
         {
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Sucursal INNER JOIN Provincia ON Id_Provincia = Id_ProvinciaSucursal WHERE Id_ProvinciaSucursal = '@IdProvincia'", conexion.ObtenerConexion());
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Sucursal INNER JOIN Provincia ON Id_Provincia = Id_ProvinciaSucursal WHERE Id_ProvinciaSucursal = @IdProvincia", conexion.ObtenerConexion());
             cmd.Parameters.AddWithValue("@IdProvincia", idProvincia);
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);

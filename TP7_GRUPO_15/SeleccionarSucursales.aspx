@@ -202,20 +202,20 @@
                     <td class="auto-style16"></td>
                     <td class="auto-style30"></td>
                     <td class="auto-style69">
-                        <asp:Button ID="btnOrdenDescendente" runat="server" OnClick="Button1_Click" Text="Orden descendente" Width="139px" />
+                        <asp:Button ID="btnOrdenDescendente" runat="server"  Text="Orden descendente" Width="139px" />
                     </td>
                     <td class="auto-style72">&nbsp;</td>
                     <td class="auto-style63">
-                        <asp:Button ID="btnOrdenXDefecto" runat="server" OnClick="btnOrdenXDefecto_Click" Text="Orden por defecto" Width="121px" />
+                        <asp:Button ID="btnOrdenXDefecto" runat="server" Text="Orden por defecto" Width="121px" />
                     </td>
                     <td class="auto-style20"></td>
                     <td class="auto-style20"></td>
                 </tr>
                 <tr>
                     <td class="auto-style23">
-                        <asp:DataList ID="DataListSucursales" runat="server" DataSourceID="SqlDataSourceSucursales">
+                        <asp:DataList ID="DataListSucursales" runat="server" DataSourceID="SqlDataSourceSucursales" OnItemCommand="btnProvincias_Command">
                             <ItemTemplate>
-                                <asp:Button ID="btnProvincias" runat="server" Text='<%# Eval("DescripcionProvincia") %>' CommandArgument='<%# Eval("Id_Provincia") %>' />
+                                <asp:Button ID="btnProvincias" runat="server" Text='<%# Eval("DescripcionProvincia") %>' CommandArgument='<%# Eval("Id_Provincia") %>' CommandName="filtrarProvincia" />
                                 <br />
                             </ItemTemplate>
                         </asp:DataList>
@@ -344,7 +344,7 @@
                     <td class="auto-style15"></td>
                     <td class="auto-style16"></td>
                     <td class="auto-style30">
-                        <asp:SqlDataSource ID="SqlDataSourceSucursales" runat="server" ConnectionString="<%$ ConnectionStrings:BDSucursalesConnectionString2 %>" SelectCommand="SELECT [DescripcionProvincia] FROM [Provincia]" ProviderName="<%$ ConnectionStrings:BDSucursalesConnectionString2.ProviderName %>"></asp:SqlDataSource>
+                        <asp:SqlDataSource ID="SqlDataSourceSucursales" runat="server" ConnectionString="<%$ ConnectionStrings:BDSucursalesConnectionString2 %>" SelectCommand="SELECT [DescripcionProvincia], [Id_Provincia] FROM [Provincia]"></asp:SqlDataSource>
                     </td>
                     <td class="auto-style69"></td>
                     <td class="auto-style72"></td>

@@ -141,7 +141,7 @@
                     <td colspan="3">
                         <asp:HyperLink ID="hpListadoSucursales" runat="server" NavigateUrl="~/SeleccionarSucursales.aspx">Listado de sucursales</asp:HyperLink>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:HyperLink ID="hpMostrarSucursales" runat="server" NavigateUrl="~/SeleccionarSucursales.aspx">Mostrar sucursales seleccionadas</asp:HyperLink>
+                        <asp:HyperLink ID="hpMostrarSucursales" runat="server" NavigateUrl="~/ListadoSucursalesSeleccionados.aspx">Mostrar sucursales seleccionadas</asp:HyperLink>
                     </td>
                     <td class="auto-style61">&nbsp;</td>
                     <td>&nbsp;</td>

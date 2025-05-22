@@ -11,6 +11,22 @@ namespace TP7_GRUPO_15
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                if (Session["SucursalSeleccionadas"] != null)
+                {
+                    gvSucursalesSeleccionadas.DataSource = Session["SucursalSeleccionadas"];
+                    gvSucursalesSeleccionadas.DataBind();
+                }
+            }
+
+        }
+
+        protected void btnEliminarSeleccion_Click(object sender, EventArgs e)
+        {
+            Session.Remove("SucursalSeleccionadas");
+            gvSucursalesSeleccionadas.DataSource = null;
+            gvSucursalesSeleccionadas.DataBind();
         }
     }
 }

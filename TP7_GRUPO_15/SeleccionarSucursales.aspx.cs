@@ -79,6 +79,23 @@ namespace TP7_GRUPO_15
                 ListViewSucursales.DataBind();
             }
         }
+
+        protected void btnOrdenDescendente_Click(object sender, EventArgs e)
+        {
+            Session["provinciaSeleccionada"] = null;
+
+            GestionSucursales GS = new GestionSucursales();
+            ListViewSucursales.DataSource = GS.OrdenDescendente();
+            ListViewSucursales.DataBind();
+
+        }
+
+        protected void btnOrdenXDefecto_Click(object sender, EventArgs e)
+        {
+            Session["provinciaSeleccionada"] = null;
+            CargarListView();
+        }
+
     }
 }
     

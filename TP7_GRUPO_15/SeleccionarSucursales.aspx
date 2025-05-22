@@ -141,7 +141,7 @@
                     <td colspan="3">
                         <asp:HyperLink ID="hpListadoSucursales" runat="server" NavigateUrl="~/SeleccionarSucursales.aspx">Listado de sucursales</asp:HyperLink>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:HyperLink ID="hpMostrarSucursales" runat="server" NavigateUrl="~/SeleccionarSucursales.aspx">Mostrar sucursales seleccionadas</asp:HyperLink>
+                        <asp:HyperLink ID="hpMostrarSucursales" runat="server" NavigateUrl="~/ListadoSucursalesSeleccionados.aspx">Mostrar sucursales seleccionadas</asp:HyperLink>
                     </td>
                     <td class="auto-style61">&nbsp;</td>
                     <td>&nbsp;</td>
@@ -204,11 +204,11 @@
                     <td class="auto-style16"></td>
                     <td class="auto-style30"></td>
                     <td class="auto-style69">
-                        <asp:Button ID="btnOrdenDescendente" runat="server"  Text="Orden descendente" Width="139px" />
+                        <asp:Button ID="btnOrdenDescendente" runat="server"  Text="Orden descendente" Width="139px" OnClick="btnOrdenDescendente_Click" />
                     </td>
                     <td class="auto-style72">&nbsp;</td>
                     <td class="auto-style63">
-                        <asp:Button ID="btnOrdenXDefecto" runat="server" Text="Orden por defecto" Width="121px" />
+                        <asp:Button ID="btnOrdenXDefecto" runat="server" Text="Orden por defecto" Width="121px" OnClick="btnOrdenXDefecto_Click" />
                     </td>
                     <td class="auto-style20"></td>
                     <td class="auto-style20"></td>

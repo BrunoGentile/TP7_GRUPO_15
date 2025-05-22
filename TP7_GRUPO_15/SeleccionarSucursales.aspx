@@ -202,11 +202,11 @@
                     <td class="auto-style16"></td>
                     <td class="auto-style30"></td>
                     <td class="auto-style69">
-                        <asp:Button ID="btnOrdenDescendente" runat="server"  Text="Orden descendente" Width="139px" />
+                        <asp:Button ID="btnOrdenDescendente" runat="server"  Text="Orden descendente" Width="139px" OnClick="btnOrdenDescendente_Click" />
                     </td>
                     <td class="auto-style72">&nbsp;</td>
                     <td class="auto-style63">
-                        <asp:Button ID="btnOrdenXDefecto" runat="server" Text="Orden por defecto" Width="121px" />
+                        <asp:Button ID="btnOrdenXDefecto" runat="server" Text="Orden por defecto" Width="121px" OnClick="btnOrdenXDefecto_Click" />
                     </td>
                     <td class="auto-style20"></td>
                     <td class="auto-style20"></td>

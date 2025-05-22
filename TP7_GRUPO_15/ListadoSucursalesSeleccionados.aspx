@@ -11,7 +11,14 @@
             width: 100%;
         }
         .auto-style2 {
-            width: 572px;
+            width: 394px;
+        }
+        .auto-style3 {
+            height: 137px;
+        }
+        .auto-style4 {
+            width: 394px;
+            height: 137px;
         }
     </style>
 </head>
@@ -58,25 +65,39 @@
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
-                    <td class="auto-style2">
-                        <asp:GridView ID="GridView1" runat="server" Width="387px" AutoGenerateColumns="False">
+                    <td class="auto-style3"></td>
+                    <td class="auto-style4">
+                        <asp:GridView ID="gvSucursalesSeleccionadas" runat="server" Width="387px" AutoGenerateColumns="False">
                             <Columns>
-                                <asp:TemplateField HeaderText="ID_SUCURSAL"></asp:TemplateField>
-                                <asp:TemplateField HeaderText="NOMBRE"></asp:TemplateField>
-                                <asp:TemplateField HeaderText="DESCRIPCION"></asp:TemplateField>
+                                <asp:TemplateField HeaderText="ID_SUCURSAL">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lbl_it_idSucursal" runat="server" Text='<%# Bind("Id_Sucursal") %>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField HeaderText="NOMBRE">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lbl_it_nombre" runat="server" Text='<%# Bind("NombreSucursal") %>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField HeaderText="DESCRIPCION">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lbl_it_descripcion" runat="server" Text='<%# Bind("DescripcionSucursal") %>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
                             </Columns>
                         </asp:GridView>
                     </td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style3"></td>
+                    <td class="auto-style3"></td>
+                    <td class="auto-style3"></td>
+                    <td class="auto-style3"></td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
                     <td class="auto-style2">&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td>
+                        <asp:Button ID="btnEliminarSeleccion" runat="server" OnClick="btnEliminarSeleccion_Click" Text="Eliminar seleccionadas" />
+                    </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>

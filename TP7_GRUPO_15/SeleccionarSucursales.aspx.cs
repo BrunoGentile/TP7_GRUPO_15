@@ -117,15 +117,46 @@ namespace TP7_GRUPO_15
         {
             if (e.CommandName == "Seleccionar")
             {
-                // Descomponemos el CommandArgument
+                // Descomponer el CommandArgument que trae los datos separados por ;
                 string[] datos = e.CommandArgument.ToString().Split(';');
 
-                // Guardamos en sesión
-                Session["Id_Sucursal"] = datos[0];
-                Session["NombreSucursal"] = datos[1];
-                Session["DescripcionSucursal"] = datos[2];
+                // Crear el DataTable si no existe en sesión
+                DataTable dtSeleccionadas;
+                if (Session["SucursalSeleccionadas"] == null)
+                {
+                    dtSeleccionadas = new DataTable();
+                    dtSeleccionadas.Columns.Add("ID_SUCURSAL", typeof(int));
+                    dtSeleccionadas.Columns.Add("NOMBRE", typeof(string));
+                    dtSeleccionadas.Columns.Add("DESCRIPCION", typeof(string));
+                }
+                else
+                {
+                    dtSeleccionadas = Session["SucursalSeleccionadas"] as DataTable;
+                }
 
-            
+                // Validar que no esté ya la sucursal seleccionada
+                bool yaExiste = false;
+                foreach (DataRow fila in dtSeleccionadas.Rows)
+                {
+                    if (fila["ID_SUCURSAL"].ToString() == datos[0])
+                    {
+                        yaExiste = true;
+                        break;
+                    }
+                }
+
+                // Si no existe, la agregamos
+                if (!yaExiste)
+                {
+                    DataRow nuevaFila = dtSeleccionadas.NewRow();
+                    nuevaFila["ID_SUCURSAL"] = Convert.ToInt32(datos[0]);
+                    nuevaFila["NOMBRE"] = datos[1];
+                    nuevaFila["DESCRIPCION"] = datos[2];
+                    dtSeleccionadas.Rows.Add(nuevaFila);
+                }
+
+                // Guardar en sesión
+                Session["SucursalSeleccionadas"] = dtSeleccionadas;
             }
         }
     }

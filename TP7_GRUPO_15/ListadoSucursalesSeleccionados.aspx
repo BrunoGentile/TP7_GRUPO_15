@@ -67,7 +67,7 @@
                 <tr>
                     <td class="auto-style3"></td>
                     <td class="auto-style4">
-                        <asp:GridView ID="gvSucursalesSeleccionadas" runat="server" Width="387px" AutoGenerateColumns="False">
+                        <asp:GridView ID="gvSucursalesSeleccionadas" runat="server" Width="479px" AutoGenerateColumns="False">
                             <Columns>
                                 <asp:TemplateField HeaderText="ID_SUCURSAL">
                                     <ItemTemplate>
@@ -76,12 +76,12 @@
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="NOMBRE">
                                     <ItemTemplate>
-                                        <asp:Label ID="lbl_it_nombre" runat="server" Text='<%# Bind("NombreSucursal") %>'></asp:Label>
+                                        <asp:Label ID="lbl_it_nombre" runat="server" Text='<%# Bind("NOMBRE") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="DESCRIPCION">
                                     <ItemTemplate>
-                                        <asp:Label ID="lbl_it_descripcion" runat="server" Text='<%# Bind("DescripcionSucursal") %>'></asp:Label>
+                                        <asp:Label ID="lbl_it_descripcion" runat="server" Text='<%# Bind("Descripcion") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                             </Columns>

@@ -298,7 +298,7 @@
                                             Text='<%# Eval("DescripcionSucursal") %>'
                                             Style="font-size: 13px; margin-bottom: 10px; height: 60px; overflow: hidden; display: block;" />
                                         <asp:Button ID="btnSeleccionar" runat="server" Text="Seleccionar"
-                                            Style="background-color: #007bff; color: white; border: none; padding: 6px 10px; border-radius: 4px; cursor: pointer; font-size: 13px;" />
+                                            Style="background-color: #007bff; color: white; border: none; padding: 6px 10px; border-radius: 4px; cursor: pointer; font-size: 13px;" CommandArgument='<%# Eval("Id_Sucursal") + ";" + Eval("NombreSucursal") + ";" + Eval("DescripcionSucursal") %>' CommandName="Seleccionar" OnCommand="btnSeleccionar_Command" />
                                     </div>
                                 </td>
                             </ItemTemplate>

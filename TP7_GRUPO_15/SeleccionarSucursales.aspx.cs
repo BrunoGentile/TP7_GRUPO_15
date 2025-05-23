@@ -113,6 +113,21 @@ namespace TP7_GRUPO_15
             CargarListView();
         }
 
+        protected void btnSeleccionar_Command(object sender, CommandEventArgs e)
+        {
+            if (e.CommandName == "Seleccionar")
+            {
+                // Descomponemos el CommandArgument
+                string[] datos = e.CommandArgument.ToString().Split(';');
+
+                // Guardamos en sesión
+                Session["Id_Sucursal"] = datos[0];
+                Session["NombreSucursal"] = datos[1];
+                Session["DescripcionSucursal"] = datos[2];
+
+            
+            }
+        }
     }
 }
     

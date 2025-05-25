@@ -63,12 +63,12 @@ namespace TP7_GRUPO_15
             // REASIGNA DATOS A LA GRILLA
             if (Session["provinciaSeleccionada"] != null)
             {
-            int idProvincia = Convert.ToInt32(Session["provinciaSeleccionada"]);
-            GestionSucursales GS = new GestionSucursales();
-            ListViewSucursales.DataSource = GS.CargarSucursalesPorProvincia(idProvincia);
-            ListViewSucursales.DataBind();
+                int idProvincia = Convert.ToInt32(Session["provinciaSeleccionada"]);
+                GestionSucursales GS = new GestionSucursales();
+                ListViewSucursales.DataSource = GS.CargarSucursalesPorProvincia(idProvincia);
+                ListViewSucursales.DataBind();
             }
-            if (Session["ordenSucursales"] != null)
+            else if (Session["ordenSucursales"] != null)
             {
                 string orden = Convert.ToString(Session["ordenSucursales"]);
                 GestionSucursales GS = new GestionSucursales();
@@ -87,7 +87,7 @@ namespace TP7_GRUPO_15
         protected void btnProvincias_Command(object sender, CommandEventArgs e)
         {
           
-            if (e.CommandName == "filtrarProvincia")
+            if ( e.CommandName == "filtrarProvincia" )
             {
                 int idProvincia = Convert.ToInt32(e.CommandArgument);
                 Session["provinciaSeleccionada"] = idProvincia;
@@ -109,7 +109,6 @@ namespace TP7_GRUPO_15
 
         protected void btnOrdenXDefecto_Click(object sender, EventArgs e)
         {
-          
             CargarListView();
         }
 
